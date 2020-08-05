@@ -23,28 +23,34 @@ site/.cache
 
 ## Usage
 
+### Build the image
+
+```sh
+docker build --tag gatsby-docker:1.0 .
+```
+
 ### Develop
 ```sh
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 aripalo/gatsby-docker develop
+docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 gatsby-docker:1.0 develop
 ```
 
 ### Stage
 
 In other words, build and serve:
 ```sh
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 aripalo/gatsby-docker stage
+docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 gatsby-docker:1.0 stage
 ```
 
 ### Build
 
 Builds production ready site into `site/public`:
 ```sh
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 aripalo/gatsby-docker build
+docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 gatsby-docker:1.0 build
 ```
 
 ### Run arbitary command inside the container
 ```sh
-docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 aripalo/gatsby-docker <YOUR-COMMAND-HERE>
+docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 gatsby-docker:1.0 <YOUR-COMMAND-HERE>
 ```
 
 For example to install a new NPM-module: `docker run -it --rm -v $(pwd)/site:/site aripalo/gatsby-docker npm i gatsby-transformer-yaml`
