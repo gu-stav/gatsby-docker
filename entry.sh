@@ -41,6 +41,3 @@ else
   exec $@
 
 fi
-
-
-

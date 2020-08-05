@@ -47,4 +47,4 @@ docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 aripalo/gatsby-docker buil
 docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 aripalo/gatsby-docker <YOUR-COMMAND-HERE>
 ```
 
-For example to install a new NPM-module: `docker run -it --rm -v $(pwd)/site:/site aripalo/gatsby-docker yarn add gatsby-transformer-yaml`
+For example to install a new NPM-module: `docker run -it --rm -v $(pwd)/site:/site aripalo/gatsby-docker npm i gatsby-transformer-yaml`
