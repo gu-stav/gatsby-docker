@@ -23,17 +23,17 @@ fi
 # Decide what to do
 if  [ "$1" == "develop" ]
 then
-  rm -rf $GATSBY_DIR/public
+  gatsby clean
   gatsby develop --host 0.0.0.0
 
 elif  [ "$1" == "build" ]
 then
-  rm -rf $GATSBY_DIR/public
+  gatsby clean
   gatsby build
 
 elif  [ "$1" == "stage" ]
 then
-  rm -rf $GATSBY_DIR/public
+  gatsby clean
   gatsby build
   gatsby serve --port 8000
 
